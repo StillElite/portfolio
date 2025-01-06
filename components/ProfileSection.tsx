@@ -13,8 +13,8 @@ export const ProfileSection = () => {
           <span className='font-bold text-[#f5a1be]'>Ebony Williams</span>.
           Frontend developer by day, UI problem-solver by night. I craft
           responsive, accessible, and intuitive web experiences, turning complex
-          code into simple, beautiful designs. Let's build the future, one pixel
-          at a time.
+          code into simple, beautiful designs. Let&apos;s build the future, one
+          pixel at a time.
         </p>
       </div>
     </section>
