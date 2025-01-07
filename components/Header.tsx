@@ -21,12 +21,20 @@ const Header: React.FC<HeaderProps> = ({ logoRef }) => {
                 className='mr-2 block'
               />
             </Link>
-            <Link
-              href='/portfolio'
-              className='text-[#313131] hover:text-[#8D3D59] font-semibold'
-            >
-              Portfolio
-            </Link>
+            <div className='flex space-x-4'>
+              <Link
+                href='/'
+                className='text-[#313131] hover:text-[#8D3D59] font-semibold'
+              >
+                Home
+              </Link>
+              <Link
+                href='/portfolio'
+                className='text-[#313131] hover:text-[#8D3D59] font-semibold'
+              >
+                Portfolio
+              </Link>
+            </div>
           </nav>
         </header>
       </div>

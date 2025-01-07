@@ -20,11 +20,11 @@ body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-y: scroll; /* Always show the scrollbar */
+  overflow-y: scroll;
 }
 
 .bg-dark-background {
-  background-image: url('/dark-background.jpg');
+  background-image: url('/dark-background.webp');
 }
 
 .bg-cube-background {

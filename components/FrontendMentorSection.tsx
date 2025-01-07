@@ -103,6 +103,17 @@ const FrontendMentorSection: React.FC = () => {
               </div>
             ))}
           </div>
+          <div className='mt-8 text-center'>
+            <a
+              href='https://www.frontendmentor.io'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='ml-4 text-lg text-[#313131] font-medium underline hover:text-[#8D3D59]'
+              aria-label='Visit Frontend Mentor website'
+            >
+              Visit Frontend Mentor
+            </a>
+          </div>
         </div>
       </div>
     </section>
