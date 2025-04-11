@@ -5,6 +5,12 @@ import { faCode, faEye } from '@fortawesome/free-solid-svg-icons';
 
 const frontendMentorLinks = [
   {
+    label: 'Countries Explorer',
+    image: '/countries.png',
+    codeLink: 'https://github.com/StillElite/countries',
+    viewLink: 'https://stillelite.github.io/countries/',
+  },
+  {
     label: 'Product List Cart',
     image: '/products.png',
     codeLink: 'https://github.com/StillElite/product-list-cart',
