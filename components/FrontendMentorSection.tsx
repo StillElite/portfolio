@@ -4,18 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faEye } from '@fortawesome/free-solid-svg-icons';
 
 const frontendMentorLinks = [
-  {
-    label: 'Countries Explorer',
-    image: '/countries.png',
-    codeLink: 'https://github.com/StillElite/countries',
-    viewLink: 'https://stillelite.github.io/countries/',
-  },
-  {
-    label: 'Product List Cart',
-    image: '/products.png',
-    codeLink: 'https://github.com/StillElite/product-list-cart',
-    viewLink: 'https://stillelite.github.io/product-list-cart/products',
-  },
+  // Temporarily removed Country Explorer and Product Cart projects
+  // due to broken public APIs. Will revisit after switching to stable data or patching image paths.
+
+  // {
+  //   label: 'Countries Explorer',
+  //   image: '/countries.png',
+  //   codeLink: 'https://github.com/StillElite/countries',
+  //   viewLink: 'https://stillelite.github.io/countries/',
+  // },
+  // {
+  //   label: 'Product List Cart',
+  //   image: '/products.png',
+  //   codeLink: 'https://github.com/StillElite/product-list-cart',
+  //   viewLink: 'https://stillelite.github.io/product-list-cart/products',
+  // },
   {
     label: 'FAQ Accordion',
     image: '/faq-accordion.png',
