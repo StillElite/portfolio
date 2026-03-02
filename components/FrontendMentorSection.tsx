@@ -3,7 +3,17 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faEye } from '@fortawesome/free-solid-svg-icons';
 
-const frontendMentorLinks = [
+type ProjectFit = 'cover' | 'contain';
+
+interface ProjectLink {
+  label: string;
+  image: string;
+  codeLink: string;
+  viewLink: string;
+  fit: ProjectFit;
+}
+
+const frontendMentorLinks: ProjectLink[] = [
   // Temporarily removed Country Explorer and Product Cart projects
   // due to broken public APIs. Will revisit after switching to stable data or patching image paths.
 
@@ -20,16 +30,25 @@ const frontendMentorLinks = [
   //   viewLink: 'https://stillelite.github.io/product-list-cart/products',
   // },
   {
+    label: 'Grow & Tell',
+    image: '/dashboard.png',
+    codeLink: 'https://github.com/StillElite/grow-and-tell',
+    viewLink: 'https://stillelite.github.io/grow-and-tell/',
+    fit: 'contain',
+  },
+  {
     label: 'FAQ Accordion',
     image: '/faq-accordion.png',
     codeLink: 'https://github.com/StillElite/faq-accordion-card-main',
     viewLink: 'https://stillelite.github.io/faq-accordion-card-main/',
+    fit: 'cover',
   },
   {
     label: 'Article Preview',
     image: '/article.png',
     codeLink: 'https://github.com/StillElite/article-preview-component-master',
     viewLink: 'https://stillelite.github.io/article-preview-component-master/',
+    fit: 'cover',
   },
   {
     label: 'Testimonials Slider',
@@ -38,12 +57,14 @@ const frontendMentorLinks = [
       'https://github.com/StillElite/coding-bootcamp-testimonials-slider-master',
     viewLink:
       'https://stillelite.github.io/coding-bootcamp-testimonials-slider-master/',
+    fit: 'cover',
   },
   {
     label: 'Profile Card',
     image: '/profile.png',
     codeLink: 'https://github.com/StillElite/profile-card-component-main',
     viewLink: 'https://stillelite.github.io/profile-card-component-main/',
+    fit: 'cover',
   },
 ];
 
@@ -59,7 +80,7 @@ const FrontendMentorSection: React.FC = () => {
             id='frontend-mentor-heading'
             className='text-3xl font-semibold mb-8 text-[#8D3D59]'
           >
-            Frontend Mentor Challenges
+            Selected Projects
           </h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
             {frontendMentorLinks.map((challenge, index) => (
@@ -67,24 +88,21 @@ const FrontendMentorSection: React.FC = () => {
                 key={index}
                 className='bg-white border border-[#D1D1D1] rounded-lg shadow-md overflow-hidden'
               >
-                {/* Image Section */}
-                <div className='relative h-64 bg-[#E5E5E5] rounded-t-lg overflow-hidden border-b border-[#dddddd]'>
+                <div className='relative h-64 bg-[#DDE2DE] rounded-t-lg overflow-hidden border-b border-[#dddddd] shadow-sm'>
                   <Image
                     src={challenge.image}
                     alt={`Screenshot of ${challenge.label}`}
-                    layout='fill'
-                    objectFit='cover'
+                    fill
+                    style={{ objectFit: challenge.fit }}
                     className='rounded-t-lg'
                   />
                 </div>
 
-                {/* Content */}
                 <div className='p-4 flex flex-col'>
                   <h3 className='text-lg font-bold text-[#8D3D59] mb-2'>
                     {challenge.label}
                   </h3>
                   <div className='flex justify-between items-center mt-auto text-sm'>
-                    {/* Code Button */}
                     <a
                       href={challenge.codeLink}
                       target='_blank'
@@ -96,7 +114,6 @@ const FrontendMentorSection: React.FC = () => {
                       Code
                     </a>
 
-                    {/* View Button */}
                     <a
                       href={challenge.viewLink}
                       target='_blank'
@@ -111,17 +128,6 @@ const FrontendMentorSection: React.FC = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className='mt-8 text-center'>
-            <a
-              href='https://www.frontendmentor.io'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='ml-4 text-lg text-[#313131] font-medium underline hover:text-[#8D3D59]'
-              aria-label='Visit Frontend Mentor website'
-            >
-              Visit Frontend Mentor
-            </a>
           </div>
         </div>
       </div>
